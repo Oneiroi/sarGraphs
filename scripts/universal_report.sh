@@ -288,17 +288,11 @@ fi
 #
 # Use output to create graph
 #
-php=`type php | awk '{print $3}'`
-if [ ! -x $php ]
-then
-	echo "$php not a valid executable"
-fi
-
 if [ $input == 'network' ]
 then
-$php ./$input''$network_size''_graph.php > ../htdocs/graphs/$input-current.jpg
+php ./$input''$network_size''_graph.php > ../htdocs/graphs/$input-current.jpg
 else
-$php ./$input''_graph.php > ../htdocs/graphs/$input-current.jpg
+php ./$input''_graph.php > ../htdocs/graphs/$input-current.jpg
 fi
 cp -a ../htdocs/graphs/$input-current.jpg ../htdocs/graphs/$input-$date.jpg
 echo "complete......"
