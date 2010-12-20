@@ -4,8 +4,8 @@ req(){
 	#check for binaries
 	php=`which php`
 	sar=`which sar`
-	[[ ! -x "$php" ]] && echo "PHP Binary not found" && return 1
-	[[ ! -x "$sar" ]] && echo "Sar bianry not found" && return 1
+	[[ ! -x "$php" ]] && echo "PHP binary not found" && return 1
+	[[ ! -x "$sar" ]] && echo "Sar binary not found" && return 1
 	#check for data
 	lCount=0
 	#not using `` as causes fork, personal reference realy.
